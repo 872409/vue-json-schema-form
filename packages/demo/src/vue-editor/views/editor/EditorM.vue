@@ -442,8 +442,9 @@
                 transform: translate(-50%, 0);
                 cursor: auto;
                 box-shadow: none;
-                &:hover, &:active{
-                    box-shadow: none;
+                &:after {
+                    display: none;
+                    content: none;
                 }
             }
         }

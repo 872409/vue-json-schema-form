@@ -129,7 +129,6 @@
         position: relative;
         cursor: move;
         box-shadow: 0 0 3px 0 rgba(0,0,0,.4);
-        transition: box-shadow 0.3s ease;
         outline: none;
         overflow: hidden;
         @nest :global .draggableSlot :local & {
@@ -138,14 +137,27 @@
         &>div {
             /*pointer-events: none;*/
         }
-        &:hover {
+        &:after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            transition: box-shadow 0.3s ease;
             z-index: 2;
-            /*box-shadow: 0 0 2px 4px color(var(--color-primary) a(0.4));*/
-            box-shadow: 0 3px 14px 3px color(var(--color-primary) a(0.6)), 0 8px 10px 1px color(var(--color-primary) a(0.5));
         }
+        &:hover {
+            &:after {
+                box-shadow: 0 0 10px 1px color(var(--color-primary) a(0.6)) inset, 0 3px 14px 3px color(var(--color-primary) a(0.7)) inset;
+            }
+        }
+
         &.active {
-            z-index: 2;
-            box-shadow: 0 0 6px 8px var(--color-primary);
+            &:after {
+                box-shadow: 0 0 6px 8px var(--color-primary) inset;
+            }
         }
     }
 
