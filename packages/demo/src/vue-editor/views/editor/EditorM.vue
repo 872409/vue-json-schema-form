@@ -122,8 +122,8 @@
 
     import { vm2Api, api2VmToolItem } from './data';
 
-    import configTools from './config/tools';
-    import configDefaultItems from './config/defaultItems';
+    import configTools from './config/mTools';
+    import configDefaultItems from './config/mDefaultItems';
 
     import { getComponentsConfig } from './common/utils';
 
@@ -145,7 +145,7 @@
                 loading: false,
                 isPreview: false,
                 configTools,
-                scale: 70,
+                scale: 100,
                 editComponentList: [],
                 editHeaderComponentList: [], // 兼容header slot ，插件内部实现导致必须分割多分数据
                 editFooterComponentList: [], // 兼容footer slot ，插件内部实现导致必须分割多分数据
@@ -199,7 +199,7 @@
         mounted() {
             // todo: 通过计算获取
             window.document.body.classList.add('page-decorate-design');
-            this.$refs.domScrollWrap.scrollLeft = 480;
+            // this.$refs.domScrollWrap.scrollLeft = 480;
         },
         destroyed() {
             window.document.body.classList.remove('page-decorate-design');
@@ -420,7 +420,8 @@
     :root {
         --site-top-height: 80px;
         --tool-bar-width: 260px;
-        --drag-area-width: 1920px;
+        --drag-area-width: 375px;
+        --drag-area-height: 630px;
     }
     /*预览模式 同步样式重置*/
     .previewBox {
@@ -433,8 +434,6 @@
         }
         .contentWrap, .dragAreaWrap{
             overflow-x: hidden;
-        }
-        .contentBox, .dragAreaWrap{
             width: auto;
         }
         :global {
@@ -487,7 +486,7 @@
     .toolsBar {
         position: absolute;
         left: 0;
-        top: 10px;
+        top: 2px;
         bottom: 0;
         background: var(--color-white);
         width: var(--tool-bar-width);
@@ -501,13 +500,10 @@
     }
 
     /*content area*/
-    .contentWrap {
-        position: relative;
-        overflow: auto;
-        height: 100%;
+    .dragAreaWrap {
         &::-webkit-scrollbar {
-            width: 6px;
-            height: 10px;
+            width: 0;
+            height: 0;
         }
         &::-webkit-scrollbar-track {
             background-color: var(--background-color-base);
@@ -519,14 +515,17 @@
     }
     .contentBox {
         position: relative;
-        width: 2000px;
+        width: auto;
         min-height: 100%;
     }
     .dragAreaWrap {
         transform-origin: top center;
         position: relative;
         width: var(--drag-area-width);
-        margin: 0 auto;
+        height: var(--drag-area-height);
+        margin: 60px auto 0;
+        overflow-x: hidden;
+        box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
     }
     .tipBox{
         pointer-events: none;
@@ -543,9 +542,7 @@
     }
     .dragArea {
         /* min-height: calc(100vh - var(--site-top-height) - 50px); */
-        min-height: calc(100vh + 100px);
         background-color: #f5f5f5;
-        padding: 10px 0;
         :global {
             .draggableToolItem {
                 width: 100%;

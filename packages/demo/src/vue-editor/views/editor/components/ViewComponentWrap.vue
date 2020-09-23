@@ -124,13 +124,14 @@
 <style module>
     @import "variable.css";
     .viewBox {
-        width: 1190px;
+        /*width: 1190px;*/
         margin: 0 auto;
         position: relative;
         cursor: move;
         box-shadow: 0 0 3px 0 rgba(0,0,0,.4);
         transition: box-shadow 0.3s ease;
         outline: none;
+        overflow: hidden;
         @nest :global .draggableSlot :local & {
             cursor: no-drop;
         }
