@@ -17,7 +17,7 @@ export default [
                     imgLink: 'https://www.jd.com'
                 },
                 {
-                    imgUrl: 'https://gw.alicdn.com/tfs/TB1DKP9zCtYBeNjSspkXXbU8VXa-1920-450.jpg_Q90.jpg',
+                    imgUrl: 'https:https://gw.alicdn.com/tfs/TB1DKP9zCtYBeNjSspkXXbU8VXa-1920-450.jpg_Q90.jpg',
                     imgLink: 'https://www.jd.com'
                 }
             ]
@@ -29,5 +29,48 @@ export default [
             txt: '抢购商品',
             txtColor: '#507aa0'
         }
-    }
+    },
+    {
+        // 默认轮播图
+        name: 'CategoryList',
+        value: {
+            imgList: [
+                {
+                    img: {
+                        imgUrl: 'https://gw.alicdn.com/tfs/TB1ISdWSFXXXXbFXXXXXXXXXXXX-146-147.png_110x10000.jpg_.webp',
+                        imgLink: 'https://www.jd.com'
+                    },
+                    name: '苏宁'
+                },
+                {
+                    name: '天猫超市',
+                    img: {
+                        imgUrl: 'https://gw.alicdn.com/tfs/TB1wSoFa5qAXuNjy1XdXXaYcVXa-196-196.png?avatar=1_110x10000.jpg_.webp',
+                        imgLink: 'https://www.jd.com'
+                    }
+                },
+                {
+                    name: '天猫国际',
+                    img: {
+                        imgUrl: 'https://gw.alicdn.com/tfs/TB1Jc0fSFXXXXXTapXXXXXXXXXX-146-147.png_110x10000.jpg_.webp',
+                        imgLink: 'https://www.jd.com'
+                    }
+                },
+                {
+                    name: '聚划算',
+                    img: {
+                        imgUrl: 'https://gw.alicdn.com/tfs/TB15lhOSFXXXXaKXpXXXXXXXXXX-147-147.png_110x10000.jpg_.webp',
+                        imgLink: 'https://www.jd.com'
+                    }
+                },
+                {
+                    name: '分类',
+                    img: {
+                        imgUrl: 'https://gw.alicdn.com/tfs/TB12CFXSFXXXXcpapXXXXXXXXXX-146-147.png_110x10000.jpg_.webp',
+                        imgLink: 'https://www.jd.com'
+                    }
+                }
+            ]
+        }
+    },
 ];
