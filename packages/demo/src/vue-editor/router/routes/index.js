@@ -18,7 +18,7 @@ const routes = [
     {
         path: '*',
         hidden: true,
-        redirect: { name: 'editor' }
+        redirect: { name: 'editorM' }
     }
 ];
 

@@ -7,12 +7,7 @@ import uiSchema from './uiSchema.js';
 
 const View = () => import('./View.vue');
 
-// Text
-const NAME = propsSchema.id;
-const componentViewName = `${NAME}View`;
-
-export {
-    componentViewName,
+export default {
     View,
     propsSchema,
     uiSchema

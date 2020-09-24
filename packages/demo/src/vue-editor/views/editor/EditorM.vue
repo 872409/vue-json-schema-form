@@ -125,15 +125,18 @@
     import configTools from './config/mTools';
     import configDefaultItems from './config/mDefaultItems';
 
-    import { getComponentsConfig } from './common/utils';
+    import { getComponentsAndInitToolsConfig } from './common/utils';
 
     import { generateEditorItem } from './common/editorData';
     import './common/registerExtraElementComponent';
 
+    // 工具栏配置的组件
+    const components = getComponentsAndInitToolsConfig(configTools);
+
     export default {
         name: 'Editor',
         components: {
-            ...getComponentsConfig(configTools),
+            ...components,
             VueElementForm,
             Draggable,
             EditorToolBar,

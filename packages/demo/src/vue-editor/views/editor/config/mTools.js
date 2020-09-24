@@ -3,10 +3,10 @@
  */
 
 // 轮播图
-import * as componentPackCarouselImg from '../viewComponentsM/CarouselImg';
+import componentPackCarouselImg from '../viewComponentsM/CarouselImg';
 
 // 纯文本
-import * as componentPackText from '../viewComponentsM/Text';
+import componentPackText from '../viewComponentsM/Text';
 
 /**
  * hidden 隐藏，不显示在工具栏
