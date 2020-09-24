@@ -114,8 +114,8 @@
 
     import * as arrayMethods from '@/_common/utils/array';
     import componentWithDialog from '@/_common/components/component-with-dialog';
-
     import JsonPerttyPrint from '@/_common/components/JsonPerttyPrint.vue';
+
     import EditorToolBar from './EditorToolBar.vue';
     import EditorHeader from './EditorHeader.vue';
     import ViewComponentWrap from './components/ViewComponentWrap.vue';
@@ -434,7 +434,6 @@
         }
         .contentWrap, .dragAreaWrap{
             overflow-x: hidden;
-            width: auto;
         }
         :global {
             .vueEditor_viewComponentBox {
@@ -514,17 +513,23 @@
             background-color: var(--color-text-placeholder);
         }
     }
+    .contentWrap {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
     .contentBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         width: auto;
         min-height: 100%;
     }
     .dragAreaWrap {
         transform-origin: top center;
-        position: relative;
         width: var(--drag-area-width);
         height: var(--drag-area-height);
-        margin: 60px auto 0;
         overflow-x: hidden;
         box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
     }
@@ -580,11 +585,6 @@
             .el-image {
                 vertical-align: top;
             }
-        }
-    }
-    .viewComponentItem {
-        &+.viewComponentItem {
-            margin-top: 10px;
         }
     }
     .ghost {

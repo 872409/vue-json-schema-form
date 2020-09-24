@@ -585,11 +585,6 @@
             }
         }
     }
-    .viewComponentItem {
-        &+.viewComponentItem {
-            margin-top: 10px;
-        }
-    }
     .ghost {
         opacity: 0.5;
     }
