@@ -53,8 +53,7 @@
                                  :class="{
                                      draggableSlot: item.$$slot,
                                      draggableItem: !item.$$slot,
-                                     [`draggableSlot_${item.$$slot}`]: item.$$slot,
-                                     [$style.viewComponentItem]: true
+                                     [`draggableSlot_${item.$$slot}`]: item.$$slot
                                  }"
                             >
                                 <ViewComponentWrap

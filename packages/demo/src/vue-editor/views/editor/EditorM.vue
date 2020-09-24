@@ -37,9 +37,9 @@
                 </EditorToolBar>
             </div>
 
-            <div ref="domScrollWrap" :class="$style.contentWrap">
+            <div :class="$style.contentWrap">
                 <div :class="[$style.contentBox]">
-                    <div :class="$style.dragAreaWrap" :style="{transform: `scale(${scale/100})`}">
+                    <div ref="domScrollWrap" :class="$style.dragAreaWrap" :style="{transform: `scale(${scale/100})`}">
                         <draggable ref="draggable"
                                    v-model="editComponentList"
                                    v-bind="dragOptions"
@@ -53,8 +53,7 @@
                                  :class="{
                                      draggableSlot: item.$$slot,
                                      draggableItem: !item.$$slot,
-                                     [`draggableSlot_${item.$$slot}`]: item.$$slot,
-                                     [$style.viewComponentItem]: true
+                                     [`draggableSlot_${item.$$slot}`]: item.$$slot
                                  }"
                             >
                                 <ViewComponentWrap
@@ -200,9 +199,7 @@
             }
         },
         mounted() {
-            // todo: 通过计算获取
             window.document.body.classList.add('page-decorate-design');
-            // this.$refs.domScrollWrap.scrollLeft = 480;
         },
         destroyed() {
             window.document.body.classList.remove('page-decorate-design');
@@ -307,7 +304,7 @@
                     // const curLeft = this.$refs.domScrollWrap.scrollLeft;
                     // this.$refs.domScrollWrap.scrollLeft = curLeft - 1;
                     // this.$refs.domScrollWrap.scrollLeft = curLeft;
-                });
+                }, 10);
             },
 
             // 用户操作数据

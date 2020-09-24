@@ -1,7 +1,7 @@
 <template>
     <div :class="$style.box">
         <div v-if="isNoEmpty" :class="$style.catelist">
-            <a v-for="(item, index) in formData.imgList" :key="index" href="item.img.imgLink" :class="$style.cateItem">
+            <a v-for="(item, index) in formData.imgList" :key="index" :href="item.img.imgLink" :class="$style.cateItem">
                 <el-image
                     :class="$style.cateItemImg"
                     :src="item.img.imgUrl"
@@ -86,7 +86,7 @@
         flex-direction: column;
         align-content: flex-start;
         flex-shrink: 0;
-        font-size: 14.248px;
+        font-size: 13px;
         text-align: center;
         line-height: 16.44px;
         align-self: center;

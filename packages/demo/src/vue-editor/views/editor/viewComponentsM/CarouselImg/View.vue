@@ -3,9 +3,9 @@
         <template v-if="isNoEmpty">
             <el-carousel
                 :autoplay="true"
-                height="200px"
+                height="180px"
             >
-                <el-carousel-item v-for="(item, index) in formData.imgList" :key="index" height="200px">
+                <el-carousel-item v-for="(item, index) in formData.imgList" :key="index" height="180px">
                     <a :class="$style.imgitem" :href="item.imgLink" target="_blank">
                         <el-image
                             class="hover-animation"
@@ -13,7 +13,7 @@
                             :src="item.imgUrl"
                             :style="{
                                 width: '100%',
-                                height: '200px',
+                                height: '180px',
                             }"
                             fit="cover"
                             alt=""

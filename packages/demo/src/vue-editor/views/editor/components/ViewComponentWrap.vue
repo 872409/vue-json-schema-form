@@ -128,7 +128,7 @@
         margin: 0 auto;
         position: relative;
         cursor: move;
-        box-shadow: 0 0 3px 0 rgba(0,0,0,.4);
+        box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
         outline: none;
         overflow: hidden;
         @nest :global .draggableSlot :local & {

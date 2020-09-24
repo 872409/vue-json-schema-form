@@ -11,6 +11,10 @@ import componentPackText from '../viewComponentsM/Text';
 // 分类条
 import CategoryList from '../viewComponentsM/CategoryList';
 
+// 分类条
+import RecommendGoods from '../viewComponentsM/RecommendGoods';
+
+
 /**
  * hidden 隐藏，不显示在工具栏
  * maxNum Number 最大可配置数
@@ -40,6 +44,12 @@ const tools = [
             viewWidth: '100%',
             icon: 'el-icon-notebook-1',
             componentPack: CategoryList
+        }, {
+            title: '推荐商品',
+            maxNum: 5,
+            viewWidth: '100%',
+            icon: 'el-icon-notebook-1',
+            componentPack: RecommendGoods
         }]
     }
 ];
